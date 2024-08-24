@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <title>Mental Health Diagnosis</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Diagnosis</h1>
+        <textarea id="description" placeholder="Describe your symptoms here..."></textarea>
+        <button id="submit-btn" onclick="getDiagnosis()">Submit</button>
+        <div id="result"></div>
+    </div>
+    <script >
+        function getDiagnosis() {
+            const textInput = document.getElementById('description').value;
+            if (textInput.trim() === "") {
+                alert("Please enter a description.");
+                return;
+            }
+
+            fetch('/prediction', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text: textInput }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').textContent = `Diagnosis: ${data.result}`;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').textContent = "An error occurred while processing your request.";
+            });
+        }
+    </script>
+</body>
+</html>

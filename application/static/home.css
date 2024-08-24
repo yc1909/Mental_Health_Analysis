@@ -1,0 +1,77 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background: url('images/background3.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: to make the content stand out more */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#submit-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #5b86e5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#submit-btn:hover {
+    background-color: #36d1dc;
+    transform: scale(1.1);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
