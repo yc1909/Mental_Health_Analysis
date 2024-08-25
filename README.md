@@ -39,7 +39,6 @@ mental_health_analysis/
 │   ├── __init__.py
 │   ├── artifacts/
 │   │   └── model_mha.pkl
-│   ├── assests/
 │   ├── static/
 │   │   ├── home.css
 │   │   ├── index.css
@@ -49,13 +48,13 @@ mental_health_analysis/
 │       ├── home.html
 │       └── index.html
 │
-├── assests/
+├── assets/
 │   ├── classification_report.png
 │   ├── confusion_matrix.png
 │   ├── embedding_model.png
 │   ├── home.png
 │   ├── index.png
-│   └── working_model.mp4
+│   └── demo.gif
 │
 └── model/
     ├── mental-health-eda-modelling-bert-94-accuracy.ipynb
@@ -90,9 +89,13 @@ The web application is built using Flask and provides an interface for users to 
 
 ### User Interface
 <a name="user-interface"></a>
-The interface is designed to be intuitive and user-friendly. Below is a demo:
+The interface is designed to be intuitive and user-friendly. 
 
-![Demo Video](assets/demo.mp4)
+<img src="assets/index.png" alt="index" width="300" height="300"/> <img src="assets/home.png" alt="home" width="300" height="300"/>
+
+Below is a demo:
+
+<img src="assets/demo.gif" alt="Demo GIF" width="400" height="400"/>
 
 ## Model Description
 <a name="model-description"></a>
@@ -101,7 +104,7 @@ The interface is designed to be intuitive and user-friendly. Below is a demo:
 <a name="model-training"></a>
 The model was trained using BERT, a state-of-the-art NLP model. The training process is documented in the Jupyter notebook `mental-health-eda-modelling-bert-94-accuracy.ipynb`. Given the size of the embedding model, it's recommended to run the notebook to generate embeddings. Below is an example of the code used for embedding:
 
-<img src="assets/embedding_model.png" alt="embedding_model" width="500" height="500"/>
+<img src="assets/embedding_model.png" alt="embedding_model" width="400" height="400"/>
 
 ### Model Artifacts
 <a name="model-artifacts"></a>
@@ -113,12 +116,12 @@ The model achieved 94% accuracy on the validation set. Below are the visualizati
 
 **Classification Report:**
 
-<img src="assets/classification_report.png" alt="classification_report" width="500" height="500"/>
+<img src="assets/classification_report.png" alt="classification_report" width="400" height="400"/>
 
 **Confusion Matrix:**
 These figures demonstrate the model’s performance across various metrics like precision, recall, and F1-score.
 
-<img src="assets/confusion_matrix.png" alt="confusion_matrix" width="500" height="500"/>
+<img src="assets/confusion_matrix.png" alt="confusion_matrix" width="400" height="400"/>
 
 ## Conclusion
 <a name="conclusion"></a>
