@@ -39,7 +39,6 @@ mental_health_analysis/
 │   ├── __init__.py
 │   ├── artifacts/
 │   │   └── model_mha.pkl
-│   ├── assests/
 │   ├── static/
 │   │   ├── home.css
 │   │   ├── index.css
@@ -49,13 +48,13 @@ mental_health_analysis/
 │       ├── home.html
 │       └── index.html
 │
-├── assests/
+├── assets/
 │   ├── classification_report.png
 │   ├── confusion_matrix.png
 │   ├── embedding_model.png
 │   ├── home.png
 │   ├── index.png
-│   └── working_model.mp4
+│   └── demo.gif
 │
 └── model/
     ├── mental-health-eda-modelling-bert-94-accuracy.ipynb
@@ -90,8 +89,13 @@ The web application is built using Flask and provides an interface for users to 
 
 ### User Interface
 <a name="user-interface"></a>
-The interface is designed to be intuitive and user-friendly. Below is a demo:
+The interface is designed to be intuitive and user-friendly. 
 
+<img src="assets/index.png" alt="index" width="500" height="500"/>
+
+<img src="assets/home.png" alt="home" width="500" height="500"/>
+
+Below is a demo:
 <img src="assets/demo.gif" alt="Demo GIF" width="500" height="500"/>
 
 ## Model Description
