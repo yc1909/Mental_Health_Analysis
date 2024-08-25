@@ -92,6 +92,8 @@ The web application is built using Flask and provides an interface for users to 
 <a name="user-interface"></a>
 The interface is designed to be intuitive and user-friendly. Below is a demo:
 
+![Demo Video](assets/demo.mp4)
+
 ## Model Description
 <a name="model-description"></a>
 
@@ -110,10 +112,12 @@ The trained model is saved in the `artifacts` folder as `model_mha.pkl`. This mo
 The model achieved 94% accuracy on the validation set. Below are the visualizations of the classification report and confusion matrix:
 
 **Classification Report:**
+
 <img src="assets/classification_report.png" alt="classification_report" width="500" height="500"/>
 
 **Confusion Matrix:**
 These figures demonstrate the model’s performance across various metrics like precision, recall, and F1-score.
+
 <img src="assets/confusion_matrix.png" alt="confusion_matrix" width="500" height="500"/>
 
 ## Conclusion
