@@ -91,11 +91,10 @@ The web application is built using Flask and provides an interface for users to 
 <a name="user-interface"></a>
 The interface is designed to be intuitive and user-friendly. 
 
-<img src="assets/index.png" alt="index" width="500" height="500"/>
-
-<img src="assets/home.png" alt="home" width="500" height="500"/>
+<img src="assets/index.png" alt="index" width="300" height="300"/> <img src="assets/home.png" alt="home" width="300" height="300"/>
 
 Below is a demo:
+
 <img src="assets/demo.gif" alt="Demo GIF" width="500" height="500"/>
 
 ## Model Description
