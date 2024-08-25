@@ -7,6 +7,7 @@ __mental_health_classifier = None
 __embedding = None
 def load_artifacts():
     print('Loading Artifacts Started')
+    
     global __mental_health_classifier
     global __embedding
 
@@ -18,6 +19,8 @@ def load_artifacts():
     print('Loading Artifacts complete')
 
 def text_preprocessor(text):
+    print('Embedding Creation Started')
+
     text_input = [text]
     user_embeddings = __embedding.predict(text_input)
 
@@ -26,6 +29,8 @@ def text_preprocessor(text):
     return user_embeddings
 
 def prediction(text):
+    print('Diagnosis Started')
+
     text_input = text_preprocessor(text)
     result = int(__mental_health_classifier.predict(text_input))
 
@@ -33,11 +38,12 @@ def prediction(text):
 
     if result in list(label.keys()):
         return label[result]
+    
+    print('Diagnosis Complete')
 
 
 
 if __name__ == '__main__':
     load_artifacts()
-    result = prediction("I always feel sad. I am never happy")
-    print(result)
+    
     
