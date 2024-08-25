@@ -1,6 +1,6 @@
 # Mental Health Analysis
 
-<img src="assets/mental_health.png" alt="Example Image" width="1000" height="400"/>
+<img src="assets/mental_health.png" alt="Example Image" width="1000" height="250"/>
 
 ## Overview
 <a name="overview"></a>
