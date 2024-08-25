@@ -21,7 +21,6 @@ This project aims to analyze and classify mental health statuses using Natural L
   - [Model Artifacts](#model-artifacts)
 - [Results](#results)
 - [Conclusion](#conclusion)
-- [License](#license)
 - [Acknowledgments](#acknowledgments)
 - [Contributions](#contributions)
 
