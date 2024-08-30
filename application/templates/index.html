@@ -10,10 +10,15 @@
     <div class="container">
         <h1>Welcome to Mental Health Analysis</h1>
         <button id="diagnosis-btn" onclick="redirectToHome()">Get Diagnosis</button>
+        <button id="assistant-btn" onclick="redirectToAssistant()">Chat With Assistant</button>
     </div>
     <script>
         function redirectToHome() {
             window.location.href = "/home";
+        }
+
+        function redirectToAssistant() {
+            window.location.href = "/assistant.html";
         }
     </script>
 </body>

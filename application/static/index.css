@@ -26,7 +26,8 @@ h1 {
     animation: slideInDown 1s ease-in-out;
 }
 
-#diagnosis-btn {
+#diagnosis-btn,
+#assistant-btn {
     padding: 10px 20px;
     font-size: 1.2rem;
     color: white;
@@ -35,9 +36,11 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    margin: 10px; /* To add some space between the buttons */
 }
 
-#diagnosis-btn:hover {
+#diagnosis-btn:hover,
+#assistant-btn:hover {
     background-color: #6a11cb;
     transform: scale(1.1);
 }
