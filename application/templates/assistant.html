@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Chat Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assistant.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div id="chat-window" class="chat-window">
+            <!-- Messages will be appended here -->
+        </div>
+        <div class="input-container">
+            <input type="text" id="chat-input" placeholder="Type your message here...">
+            <button onclick="askQuestion()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        async function askQuestion() {
+            const inputText = document.getElementById('chat-input').value;
+            if (!inputText.trim()) return;
+
+            // Display user's question in chat window
+            const userMessage = document.createElement('div');
+            userMessage.className = 'chat-message user-message';
+            userMessage.innerHTML = `<p>${inputText}</p>`;
+            document.getElementById('chat-window').appendChild(userMessage);
+            document.getElementById('chat-input').value = '';
+
+            // Scroll to the bottom of the chat
+            document.getElementById('chat-window').scrollTop = document.getElementById('chat-window').scrollHeight;
+
+            // Send the question to the server
+            const response = await fetch('/mental_health_chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ input_text: inputText })
+            });
+
+            // Display assistant's response in chat window
+            const result = await response.json();
+            const botMessage = document.createElement('div');
+            botMessage.className = 'chat-message bot-message';
+            botMessage.innerHTML = `<p>${result.content}</p>`;
+            document.getElementById('chat-window').appendChild(botMessage);
+
+            // Scroll to the bottom of the chat
+            document.getElementById('chat-window').scrollTop = document.getElementById('chat-window').scrollHeight;
+        }
+    </script>
+</body>
+</html>
