@@ -58,10 +58,10 @@ mental_health_analysis/
 │   ├── confusion_matrix.png
 │   ├── embedding_model.png
 │   ├── home.png
-│   ├── index.png
+│   ├── index_new.png
 │   ├── assistant.png
-│   └── demo.gif
-│   └── chatbot.gif
+│   └── analysis_demo.gif
+│   └── bot_demo.gif
 │
 └── model/
     ├── mental-health-eda-modelling-bert-94-accuracy.ipynb
@@ -99,11 +99,13 @@ The web application is built using Flask and provides an interface for users to 
 <a name="user-interface"></a>
 The interface is designed to be intuitive and user-friendly. 
 
-<img src="assets/index.png" alt="index" width="300" height="300"/> <img src="assets/home.png" alt="home" width="300" height="300"/>
+<img src="assets/index_new.png" alt="index" width="400" height="400"/> 
+
+<img src="assets/home.png" alt="home" width="300" height="300"/> <img src="assets/assistant.png" alt="assistant" width="300" height="300"/> 
 
 Below is a demo:
 
-<img src="assets/demo.gif" alt="Demo GIF" width="400" height="400"/>
+<img src="assets/analysis_demo.gif" alt="Demo GIF" width="400" height="400"/>
 
 ## Chatbot Description
 <a name="chatbot-description"></a>
@@ -117,6 +119,8 @@ The chatbot feature acts as a helpful assistant to answer queries related to men
 **chatbot.py**: The FastAPI server code that handles chatbot interactions.
 
 The chatbot listens for user input through the /chat endpoint and provides responses using a predefined prompt and the Ollama language model. The responses are parsed using the StrOutputParser, ensuring clear and relevant answers. Below is a demo of the chatbot in action:
+
+<img src="assets/bot_demo.gif" alt="Bot Demo GIF" width="400" height="400"/>
 
 ## Model Description
 <a name="model-description"></a>
