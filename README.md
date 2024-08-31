@@ -105,7 +105,7 @@ The interface is designed to be intuitive and user-friendly.
 
 Below is a demo:
 
-<img src="assets/analysis_demo.gif" alt="Demo GIF" width="500" height="500"/>
+<img src="assets/analysis_demo.gif" alt="Demo GIF" width="700" height="700"/>
 
 ## Chatbot Description
 <a name="chatbot-description"></a>
@@ -120,7 +120,7 @@ The chatbot feature acts as a helpful assistant to answer queries related to men
 
 The chatbot listens for user input through the /chat endpoint and provides responses using a predefined prompt and the Ollama language model. The responses are parsed using the StrOutputParser, ensuring clear and relevant answers. Below is a demo of the chatbot in action:
 
-<img src="assets/bot_demo.gif" alt="Bot Demo GIF" width="500" height="500"/>
+<img src="assets/bot_demo.gif" alt="Bot Demo GIF" width="700" height="700"/>
 
 ## Model Description
 <a name="model-description"></a>
