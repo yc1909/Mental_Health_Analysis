@@ -16,6 +16,7 @@ This project aims to analyze and classify mental health statuses using Natural L
 - [Application Description](#application-description)
   - [Web Application](#web-application)
   - [User Interface](#user-interface)
+- [Chatbot Description](#chatbot-description)
 - [Model Description](#model-description)
   - [Model Training](#model-training)
   - [Model Artifacts](#model-artifacts)
@@ -37,17 +38,20 @@ mental_health_analysis/
 ├── application/
 │   ├── server.py
 │   ├── utils.py
+│   ├── chatbot.py
 │   ├── __init__.py
 │   ├── artifacts/
 │   │   └── model_mha.pkl
 │   ├── static/
 │   │   ├── home.css
 │   │   ├── index.css
+│   │   ├── assistant.css
 │   │   └── images/
 │   │       └── background3.png
 │   └── templates/
 │       ├── home.html
-│       └── index.html
+│       ├── index.html
+│       └── assistant.html
 │
 ├── assets/
 │   ├── classification_report.png
@@ -55,7 +59,9 @@ mental_health_analysis/
 │   ├── embedding_model.png
 │   ├── home.png
 │   ├── index.png
+│   ├── assistant.png
 │   └── demo.gif
+│   └── chatbot.gif
 │
 └── model/
     ├── mental-health-eda-modelling-bert-94-accuracy.ipynb
@@ -85,8 +91,9 @@ pip install -r requirements.txt
 <a name="web-application"></a>
 The web application is built using Flask and provides an interface for users to input text and receive predictions on mental health conditions. The application structure is organized as follows:
 
-**Templates**: HTML files for the frontend `home.html`, `index.html`.
-**Static**: Contains CSS files `home.css`, `index.css` and images `background3.png`.
+**Templates**: HTML files for the frontend `home.html`, `index.html`, `assistant.html`.
+
+**Static**: Contains CSS files `home.css`, `index.css`, `assistant.css`  and images `background3.png`.
 
 ### User Interface
 <a name="user-interface"></a>
@@ -97,6 +104,17 @@ The interface is designed to be intuitive and user-friendly.
 Below is a demo:
 
 <img src="assets/demo.gif" alt="Demo GIF" width="400" height="400"/>
+
+## Chatbot Description
+<a name="chatbot-description"></a>
+
+The new chatbot feature acts as a helpful assistant to answer queries related to mental health. The chatbot is implemented using FastAPI, and it leverages Langchain and Ollama models to generate responses. The interaction is managed through the following files:
+
+**assistant.html**: The HTML template for the chatbot interface.
+**assistant.css**: The CSS file for styling the chatbot interface.
+**chatbot.py**: The FastAPI server code that handles chatbot interactions.
+
+The chatbot listens for user input through the /chat endpoint and provides responses using a predefined prompt and the Ollama language model. The responses are parsed using the StrOutputParser, ensuring clear and relevant answers. Below is a demo of the chatbot in action:
 
 ## Model Description
 <a name="model-description"></a>
