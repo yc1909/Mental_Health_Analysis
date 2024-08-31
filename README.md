@@ -108,10 +108,12 @@ Below is a demo:
 ## Chatbot Description
 <a name="chatbot-description"></a>
 
-The new chatbot feature acts as a helpful assistant to answer queries related to mental health. The chatbot is implemented using FastAPI, and it leverages Langchain and Ollama models to generate responses. The interaction is managed through the following files:
+The chatbot feature acts as a helpful assistant to answer queries related to mental health. The chatbot is implemented using FastAPI, and it leverages Langchain and Ollama models to generate responses. The interaction is managed through the following files:
 
 **assistant.html**: The HTML template for the chatbot interface.
+
 **assistant.css**: The CSS file for styling the chatbot interface.
+
 **chatbot.py**: The FastAPI server code that handles chatbot interactions.
 
 The chatbot listens for user input through the /chat endpoint and provides responses using a predefined prompt and the Ollama language model. The responses are parsed using the StrOutputParser, ensuring clear and relevant answers. Below is a demo of the chatbot in action:
