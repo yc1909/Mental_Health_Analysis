@@ -5,7 +5,7 @@
 ## Overview
 <a name="overview"></a>
 
-This project aims to analyze and classify mental health statuses using Natural Language Processing (NLP) techniques and machine learning models. The final deliverable is a web application that predicts mental health conditions based on user inputs.
+This project aims to analyze and classify mental health statuses using Natural Language Processing (NLP) techniques and machine learning models. The final deliverable is a web application that predicts mental health conditions based on user inputs and also provides assistance to them based on their queries.
 
 ## Table of Contents
 - [Overview](#overview)
